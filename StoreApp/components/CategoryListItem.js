@@ -8,12 +8,13 @@ import {
 import Skii from '../assets/ski.png';
 
 export default function CategoryListItem(props) {
-    return(
-        <View style={ styles.container }>
-            <Text style={ styles.title }>
-                CategoryListItem
+    const { category } = props;
+    return (
+        <View style={styles.container}>
+            <Text style={styles.title}>
+                {category.name}
             </Text>
-            <Image source={Skii} style={ styles.categoryItem }/>
+            <Image source={Skii} style={styles.categoryItem} />
         </View>
     )
 }
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
     },
     categoryItem: {
         width: 64,
-        height : 64,
+        height: 64,
     },
     title: {
         textTransform: 'uppercase',
